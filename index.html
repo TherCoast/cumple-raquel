@@ -36,7 +36,7 @@
                     <span class="say">Mas luz para tu futuro🏅</span><br>
                     <span class="say">Nada que celebrar, solo agradecer🫂</span><br>
                     <span class="say">Estoy muy orgulloso de tí💖</span><br>
-                    <span class="say">Eres una maravillosa chica Raq👩‍❤️‍💋‍👨</span><br>
+                    <span class="say">Eres una maravillosa chica Raquel👩‍❤️‍💋‍👨</span><br>
                     <span class="say">Sigue siendo unica y majestuosa. Como un delfin🐬</span><br>
                 </div>
             </div>
@@ -123,30 +123,30 @@
         var seedAnimate = eval(Jscex.compile("async", function () {
             seed.draw();
             while (hold) {
-                $await(Jscex.Async.sleep(10));
+                $await(Jscex.Async.sleep(16));
             }
             while (seed.canScale()) {
                 seed.scale(0.95);
-                $await(Jscex.Async.sleep(10));
+                $await(Jscex.Async.sleep(16));
             }
             while (seed.canMove()) {
                 seed.move(0, 2);
                 foot.draw();
-                $await(Jscex.Async.sleep(10));
+                $await(Jscex.Async.sleep(16));
             }
         }));
 
         var growAnimate = eval(Jscex.compile("async", function () {
             do {
                 tree.grow();
-                $await(Jscex.Async.sleep(10));
+                $await(Jscex.Async.sleep(16));
             } while (tree.canGrow());
         }));
 
         var flowAnimate = eval(Jscex.compile("async", function () {
             do {
                 tree.flower(2);
-                $await(Jscex.Async.sleep(10));
+                $await(Jscex.Async.sleep(16));
             } while (tree.canFlower());
         }));
 
@@ -154,15 +154,13 @@
             tree.snapshot("p1", 240, 0, 610, 680);
             while (tree.move("p1", 500, 0)) {
                 foot.draw();
-                $await(Jscex.Async.sleep(10));
+                $await(Jscex.Async.sleep(16));
             }
             foot.draw();
             tree.snapshot("p2", 500, 0, 610, 680);
 
-            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
-            canvas.css("background", "#ffe");
-            $await(Jscex.Async.sleep(300));
-            canvas.css("background", "none");
+canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+canvas.css("background", "transparent");
         }));
 
         var textAnimate = eval(Jscex.compile("async", function () {
